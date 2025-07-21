@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- KamsyView main styleable -->
+    <declare-styleable name="KamsyView">
+
+        <!-- Basic appearance -->
+        <attr name="backgroundColor" format="color|reference" />
+        <attr name="placeholderText" format="string|reference" />
+        <attr name="iconDrawableScale" format="float" />
+        <attr name="avatarMargin" format="dimension" />
+
+        <!-- Border configuration -->
+        <attr name="borderColor" format="color|reference" />
+        <attr name="borderColorSecondary" format="color|reference" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderGradientAngle" format="integer" />
+
+        <!-- Border arches -->
+        <attr name="archesCount" format="integer" />
+        <attr name="archesDegreeArea" format="integer" />
+        <attr name="archesAngle" format="integer" />
+        <attr name="archesType" format="enum">
+            <enum name="single" value="0" />
+            <enum name="mirror" value="1" />
+        </attr>
+
+        <!-- Text styling -->
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSizePercentage" format="float" />
+        <attr name="android:fontFamily" />
+
+        <!-- Volumetric effects -->
+        <attr name="kamsyVolumetricType" format="enum">
+            <enum name="none" value="-1" />
+            <enum name="all" value="0" />
+            <enum name="drawable" value="1" />
+            <enum name="placeholder" value="2" />
+        </attr>
+        <attr name="volumetricIntensity" format="float" />
+        <attr name="volumetricLightAngle" format="integer" />
+
+        <!-- BlurHash -->
+        <attr name="blurHash" format="string" />
+        <attr name="blurHashPunch" format="float" />
+
+        <!-- Overlay effects -->
+        <attr name="overlayTint" format="color|reference" />
+        <attr name="overlayTintAlpha" format="float" />
+        <attr name="overlayScrim" format="color|reference" />
+        <attr name="overlayScrimAlpha" format="float" />
+        <attr name="overlayBlendMode" format="enum">
+            <enum name="blendSrcAtop" value="0" />
+            <enum name="blendMultiply" value="1" />
+            <enum name="blendScreen" value="2" />
+            <enum name="blendOverlay" value="3" />
+            <enum name="blendDarken" value="4" />
+            <enum name="blendLighten" value="5" />
+            <enum name="blendAdd" value="6" />
+            <enum name="blendSubtract" value="7" />
+        </attr>
+
+        <!-- Status indicators -->
+        <attr name="statusIndicator" format="enum">
+            <enum name="none" value="-1" />
+            <enum name="online" value="0" />
+            <enum name="offline" value="1" />
+            <enum name="away" value="2" />
+            <enum name="busy" value="3" />
+            <enum name="custom" value="4" />
+        </attr>
+        <attr name="statusColor" format="color|reference" />
+        <attr name="statusPosition" format="enum">
+            <enum name="topLeft" value="0" />
+            <enum name="topRight" value="1" />
+            <enum name="bottomLeft" value="2" />
+            <enum name="bottomRight" value="3" />
+            <enum name="center" value="4" />
+        </attr>
+        <attr name="statusSize" format="dimension" />
+
+        <!-- Badges -->
+        <attr name="badgeText" format="string" />
+        <attr name="badgeBackgroundColor" format="color|reference" />
+        <attr name="badgeTextColor" format="color|reference" />
+        <attr name="badgePosition" format="enum">
+            <enum name="topLeft" value="10" />
+            <enum name="topRight" value="11" />
+            <enum name="bottomLeft" value="12" />
+            <enum name="bottomRight" value="13" />
+            <enum name="center" value="14" />
+        </attr>
+        <attr name="badgeSize" format="dimension" />
+
+        <!-- Animations -->
+        <attr name="animationEnabled" format="boolean" />
+        <attr name="borderAnimationDuration" format="integer" />
+        <attr name="volumetricAnimationDuration" format="integer" />
+        <attr name="autoStartAnimation" format="boolean" />
+
+        <!-- Shape configuration -->
+        <attr name="kamsyShape" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="roundedSquare" value="1" />
+            <enum name="hexagon" value="2" />
+            <enum name="squircle" value="3" />
+            <enum name="diamond" value="4" />
+            <enum name="star" value="5" />
+            <enum name="custom" value="6" />
+        </attr>
+        <attr name="cornerRadius" format="dimension" />
+
+        <!-- Style presets -->
+        <attr name="kamsyStyle" format="enum">
+            <enum name="defaultStyle" value="0" />
+            <enum name="minimal" value="1" />
+            <enum name="material3" value="2" />
+            <enum name="gaming" value="3" />
+            <enum name="professional" value="4" />
+        </attr>
+
+        <!-- Loading and error states -->
+        <attr name="loadingColor" format="color|reference" />
+        <attr name="showLoadingIndicator" format="boolean" />
+
+        <!-- Performance -->
+        <attr name="cacheEnabled" format="boolean" />
+        <attr name="maxCacheSize" format="integer" />
+        <attr name="hardwareAccelerated" format="boolean" />
+
+        <!-- Accessibility -->
+        <attr name="contentDescription" format="string" />
+        <attr name="accessibilityEnabled" format="boolean" />
+
+        <!-- Standard ImageView attributes -->
+        <attr name="android:src" />
+        <attr name="android:scaleType" />
+        <attr name="android:adjustViewBounds" />
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:cropToPadding" />
+        <attr name="android:tint" />
+        <attr name="android:tintMode" />
+
+    </declare-styleable>
+
+    <!-- Theme integration -->
+    <declare-styleable name="KamsyViewTheme">
+        <attr name="defaultStyle" format="reference" />
+        <attr name="minimalStyle" format="reference" />
+        <attr name="material3Style" format="reference" />
+        <attr name="gamingStyle" format="reference" />
+        <attr name="professionalStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- Color palette -->
+    <declare-styleable name="KamsyViewColors">
+        <attr name="primaryColor" format="color|reference" />
+        <attr name="secondaryColor" format="color|reference" />
+        <attr name="accentColor" format="color|reference" />
+        <attr name="errorColor" format="color|reference" />
+        <attr name="successColor" format="color|reference" />
+        <attr name="warningColor" format="color|reference" />
+        <attr name="onlineColor" format="color|reference" />
+        <attr name="offlineColor" format="color|reference" />
+    </declare-styleable>
+
+    <!-- Size presets -->
+    <declare-styleable name="KamsyViewSizes">
+        <attr name="smallSize" format="dimension" />
+        <attr name="mediumSize" format="dimension" />
+        <attr name="largeSize" format="dimension" />
+        <attr name="xLargeSize" format="dimension" />
+        <attr name="defaultBorderWidth" format="dimension" />
+        <attr name="defaultCornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <!-- Animation configuration -->
+    <declare-styleable name="KamsyViewAnimation">
+        <attr name="defaultAnimationDuration" format="integer" />
+        <attr name="fastAnimationDuration" format="integer" />
+        <attr name="slowAnimationDuration" format="integer" />
+        <attr name="animationInterpolator" format="enum">
+            <enum name="interpLinear" value="0" />
+            <enum name="interpAccelerate" value="1" />
+            <enum name="interpDecelerate" value="2" />
+            <enum name="interpAccelerateDecelerate" value="3" />
+            <enum name="interpBounce" value="4" />
+            <enum name="interpOvershoot" value="5" />
+            <enum name="interpAnticipate" value="6" />
+        </attr>
+        <attr name="animationRepeatCount" format="integer" />
+        <attr name="animationRepeatMode" format="enum">
+            <enum name="repeatRestart" value="0" />
+            <enum name="repeatReverse" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!-- General position enumeration with unique names -->
+    <attr name="kamsyGeneralPosition" format="enum">
+        <enum name="posTopLeft" value="20" />
+        <enum name="posTopCenter" value="21" />
+        <enum name="posTopRight" value="22" />
+        <enum name="posCenterLeft" value="23" />
+        <enum name="posCenter" value="24" />
+        <enum name="posCenterRight" value="25" />
+        <enum name="posBottomLeft" value="26" />
+        <enum name="posBottomCenter" value="27" />
+        <enum name="posBottomRight" value="28" />
+    </attr>
+
+    <!-- Gravity enumeration with unique names -->
+    <attr name="kamsyGravity" format="enum">
+        <enum name="gravityStart" value="30" />
+        <enum name="gravityCenter" value="31" />
+        <enum name="gravityEnd" value="32" />
+        <enum name="gravityTop" value="33" />
+        <enum name="gravityBottom" value="34" />
+    </attr>
+
+    <!-- Reusable standalone attributes -->
+    <attr name="radius" format="dimension" />
+    <attr name="size" format="dimension" />
+    <attr name="spacing" format="dimension" />
+    <attr name="elevation" format="dimension" />
+    <attr name="intensity" format="float" />
+    <attr name="scale" format="float" />
+    <attr name="alpha" format="float" />
+    <attr name="ratio" format="float" />
+    <attr name="duration" format="integer" />
+    <attr name="angle" format="integer" />
+    <attr name="count" format="integer" />
+    <attr name="delay" format="integer" />
+    <attr name="enabled" format="boolean" />
+    <attr name="visible" format="boolean" />
+    <attr name="animated" format="boolean" />
+    <attr name="clickable" format="boolean" />
+    <attr name="text" format="string" />
+    <attr name="hint" format="string" />
+    <attr name="description" format="string" />
+
+</resources>
